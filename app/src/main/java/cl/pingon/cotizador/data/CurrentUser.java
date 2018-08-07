@@ -1,4 +1,4 @@
-package cl.pingon.cotizador;
+package cl.pingon.cotizador.data;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -10,4 +10,10 @@ public class CurrentUser {
     public FirebaseUser getCurrentUser() {
         return currentUser;
     }
+
+    public String email() {
+        return getCurrentUser().getEmail();
+    }
+
+    public String uid() {return currentUser.getUid(); }
 }

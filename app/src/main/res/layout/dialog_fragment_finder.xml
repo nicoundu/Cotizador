@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+        <EditText
+            android:id="@+id/clientEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ingrese el Cliente"
+            android:inputType="textPersonName"
+            android:padding="16dp"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/projectEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ingrese la Obra"
+            android:inputType="textPersonName"
+            android:padding="16dp"
+            android:textSize="18sp" />
+
+
+        <EditText
+            android:id="@+id/dateEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ingrese la Fecha"
+            android:inputType="date"
+            android:padding="16dp"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/sendBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="INGRESAR VISITA"
+            android:textSize="18sp" />
+
+        <ProgressBar
+            android:visibility="gone"
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+</LinearLayout>

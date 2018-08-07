@@ -14,4 +14,30 @@
     <string name="facebook_application_id" translatable="false">493058247799524</string>
     <string name="facebook_login_protocol_scheme" translatable="false">493058247799524</string>
 
-    </resources>
+    <string name="gp4010">GP 40.10</string>
+    <string name="gp4511">GP 45.11</string>
+    <string name="gpct5113">GP CT 51.13</string>
+    <string name="gpy5113">GP Y 51.13</string>
+    <string name="gpct5425">GP CT 54.25</string>
+    <string name="pt56312">PT 563.12</string>
+    <string name="j4010">J 40.10</string>
+    <string name="j4510">J 45.10</string>
+    <string name="j47ns">J 47 NS</string>
+
+    <array name="cranes">
+        <item>@string/gp4010</item>
+        <item>@string/gp4511</item>
+        <item>@string/gpct5113</item>
+        <item>@string/gpy5113</item>
+        <item>@string/gpct5425</item>
+        <item>@string/pt56312</item>
+        <item>@string/j4010</item>
+        <item>@string/j4510</item>
+        <item>@string/j47ns</item>
+    </array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_visit">VisitActivity</string>
+
+</resources>

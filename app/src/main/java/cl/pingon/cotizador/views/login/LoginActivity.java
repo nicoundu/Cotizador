@@ -1,17 +1,16 @@
-package cl.pingon.cotizador;
+package cl.pingon.cotizador.views.login;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.os.Handler;
-import android.view.MotionEvent;
-import android.view.View;
 
 import com.firebase.ui.auth.AuthUI;
 
 import java.util.Arrays;
+
+import cl.pingon.cotizador.data.CurrentUser;
+import cl.pingon.cotizador.R;
+import cl.pingon.cotizador.views.main.MainActivity;
 
 
 public class LoginActivity extends AppCompatActivity {
@@ -43,6 +42,10 @@ public class LoginActivity extends AppCompatActivity {
                                 new AuthUI.IdpConfig.EmailBuilder().build(),
                                 new AuthUI.IdpConfig.GoogleBuilder().build(),
                                 new AuthUI.IdpConfig.FacebookBuilder().build()))
+
+                        .setTheme(R.style.LoginTheme)
+                        .setLogo(R.mipmap.logo)
+
                         .build(),
                 RC_SIGN_IN);
 
