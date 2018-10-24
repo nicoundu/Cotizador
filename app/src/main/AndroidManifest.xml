@@ -30,7 +30,7 @@
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".views.main.visit.VisitActivity"
+            android:name=".views.main.visit.CategoriesActivity"
             android:label="@string/title_activity_visit"
             android:theme="@style/AppTheme"/>
     </application>

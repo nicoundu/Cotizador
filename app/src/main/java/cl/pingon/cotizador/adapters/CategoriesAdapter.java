@@ -5,20 +5,18 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 
 import cl.pingon.cotizador.R;
-import cl.pingon.cotizador.model.Visits;
-import cl.pingon.cotizador.views.main.visit.VisitFragment;
+import cl.pingon.cotizador.model.Categories;
 
-public class VisitsAdapter extends FirebaseRecyclerAdapter<Visits, VisitsAdapter.ViewHolder> {
+public class CategoriesAdapter extends FirebaseRecyclerAdapter<Categories, CategoriesAdapter.ViewHolder> {
 
-    private VisitListener listener;
+    private CategoriesListener listener;
 
-    public VisitsAdapter(@NonNull FirebaseRecyclerOptions<Visits> options, VisitListener listener) {
+    public CategoriesAdapter(@NonNull FirebaseRecyclerOptions<Categories> options, CategoriesListener listener) {
         super(options);
         this.listener = listener;
     }
@@ -26,26 +24,28 @@ public class VisitsAdapter extends FirebaseRecyclerAdapter<Visits, VisitsAdapter
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item_visit, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item_categories, parent, false);
         ViewHolder viewHolder = new ViewHolder(view);
         return viewHolder;
     }
 
 
     @Override
-    protected void onBindViewHolder(@NonNull final ViewHolder holder, int position, @NonNull Visits visits) {
+    protected void onBindViewHolder(@NonNull final ViewHolder holder, int position, @NonNull Categories categories) {
 
-        holder.clientTv.setText(visits.getClient());
-        holder.projectTv.setText(visits.getProject());
-        holder.dateTv.setText(visits.getDate());
+        /*holder.clientTv.setText(categories.getName());
+        holder.projectTv.setText(categories.getName());
+        holder.dateTv.setText("");*/
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Visits auxVisits = getItem(holder.getAdapterPosition());
-                listener.clicked(auxVisits);
+                Categories auxCategories = getItem(holder.getAdapterPosition());
+                listener.clicked(auxCategories);
             }
         });
+
+        //Picasso.get().load(categories.getPhoto()).centerCrop().fit().into(holder.imageview);
 
     }
 
@@ -54,16 +54,16 @@ public class VisitsAdapter extends FirebaseRecyclerAdapter<Visits, VisitsAdapter
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
 
-        private TextView clientTv;
+        /*private TextView clientTv;
         private TextView projectTv;
-        private TextView dateTv;
+        private TextView dateTv;*/
 
         public ViewHolder(View itemView) {
             super(itemView);
 
-            clientTv = itemView.findViewById(R.id.clientTv);
+            /*clientTv = itemView.findViewById(R.id.clientTv);
             projectTv = itemView.findViewById(R.id.projectTv);
-            dateTv = itemView.findViewById(R.id.dateTv);
+            dateTv = itemView.findViewById(R.id.dateTv);*/
 
 
         }

@@ -16,52 +16,52 @@ import android.view.ViewGroup;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 
 import cl.pingon.cotizador.R;
-import cl.pingon.cotizador.adapters.VisitListener;
-import cl.pingon.cotizador.adapters.VisitsAdapter;
-import cl.pingon.cotizador.data.CurrentUser;
+import cl.pingon.cotizador.adapters.CategoriesListener;
+import cl.pingon.cotizador.adapters.CategoriesAdapter;
 import cl.pingon.cotizador.data.Nodes;
-import cl.pingon.cotizador.model.Visits;
+import cl.pingon.cotizador.model.Categories;
 
-public class VisitFragment extends Fragment implements VisitListener{
+public class CategoriesFragment extends Fragment implements CategoriesListener {
 
-    public static final String VISIT = "cl.pingon.cotizador.views.main.visit.KEY.VISIT";
-    private VisitsAdapter adapter;
+    public static final String CATEGORIES = "cl.pingon.cotizador.views.main.visit.KEY.CATEGORIES";
+    private CategoriesAdapter adapter;
 
 
-    public VisitFragment() {
+    public CategoriesFragment() {
     }
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_visit, container, false);
+        return inflater.inflate(R.layout.fragment_categories, container, false);
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        RecyclerView recyclerView = view.findViewById(R.id.visitsRv);
+        RecyclerView recyclerView = view.findViewById(R.id.categoriesRv);
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.addItemDecoration(new DividerItemDecoration(getContext(), DividerItemDecoration.VERTICAL));
 
-        FirebaseRecyclerOptions<Visits> options = new FirebaseRecyclerOptions.Builder<Visits>()
-                .setQuery(new Nodes().visits(), Visits.class)
+        FirebaseRecyclerOptions<Categories> options = new FirebaseRecyclerOptions.Builder<Categories>()
+                .setQuery(new Nodes().categories(), Categories.class)
                 .setLifecycleOwner(getActivity())
                 .build();
 
-        adapter = new VisitsAdapter(options, this);
+        adapter = new CategoriesAdapter(options, this);
         recyclerView.setAdapter(adapter);
 
     }
 
     @Override
-    public void clicked(Visits visits) {
-        Intent intent = new Intent(getActivity(), VisitActivity.class);
-        intent.putExtra(VISIT, visits);
+    public void clicked(Categories categories) {
+        //TODO this is the example to pass a key to the other activity
+        Intent intent = new Intent(getActivity(), CategoriesActivity.class);
+        intent.putExtra(CATEGORIES, categories);
         startActivity(intent);
     }
 }

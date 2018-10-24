@@ -5,9 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".views.main.visit.VisitActivity">
+    tools:context=".views.main.visit.CategoriesActivity">
 
+    <EditText
+        android:padding="8dp"
+        android:id="@+id/commentEt"
+        android:hint="Ingresa tus comentarios"
+        android:maxLines="6"
+        android:inputType="text"
+        android:layout_width="match_parent"
+        android:layout_height="100dp" />
 
-
+    
 
 </LinearLayout>

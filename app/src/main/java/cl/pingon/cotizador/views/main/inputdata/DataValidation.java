@@ -1,18 +1,14 @@
 package cl.pingon.cotizador.views.main.inputdata;
 
-import android.content.Context;
-
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 
-import cl.pingon.cotizador.data.CurrentUser;
 import cl.pingon.cotizador.data.Nodes;
-import cl.pingon.cotizador.model.Visits;
+import cl.pingon.cotizador.model.Categories;
 
 public class DataValidation {
 
     private InputDataCallback callback;
-    private Visits visits = new Visits();
+    private Categories categories = new Categories();
 
     public DataValidation(InputDataCallback callback) {
         this.callback = callback;
@@ -26,7 +22,7 @@ public class DataValidation {
 
     public void inputClient(String client) {
         if (client.trim().length() > 0) {
-            visits.setClient(client);
+            //categories.setClient(client);
         } else {
             callback.error("Debe ingresar un cliente");
             return;
@@ -35,7 +31,7 @@ public class DataValidation {
 
     public void inputProject(String project) {
         if (project.trim().length() > 0) {
-            visits.setProject(project);
+            categories.setName(project);
 
         } else {
             callback.error("Debe ingresar una obra");
@@ -45,19 +41,19 @@ public class DataValidation {
 
     public void inputDate(String date) {
         if (date.trim().length() > 0) {
-            visits.setDate(date);
-            createVisit(visits);
+            //categories.setDate(date);
+            createVisit(categories);
         }else {
             callback.error("Debe ingresar una fecha");
             return;
         }
     }
 
-    private void createVisit(Visits visits) {
-        DatabaseReference ref = new Nodes().visits();
+    private void createVisit(Categories categories) {
+        DatabaseReference ref = new Nodes().categories();
         String key = ref.push().getKey();
-        visits.setKey(key);
-        new Nodes().visits().child(key).setValue(visits);
+        categories.setKey(key);
+        new Nodes().categories().child(key).setValue(categories);
         callback.succes();
     }
 

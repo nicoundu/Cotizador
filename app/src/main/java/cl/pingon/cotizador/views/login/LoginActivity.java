@@ -39,9 +39,7 @@ public class LoginActivity extends AppCompatActivity {
                 AuthUI.getInstance()
                         .createSignInIntentBuilder()
                         .setAvailableProviders(Arrays.asList(
-                                new AuthUI.IdpConfig.EmailBuilder().build(),
-                                new AuthUI.IdpConfig.GoogleBuilder().build(),
-                                new AuthUI.IdpConfig.FacebookBuilder().build()))
+                                new AuthUI.IdpConfig.EmailBuilder().build()))
 
                         .setTheme(R.style.LoginTheme)
                         .setLogo(R.mipmap.logo)
