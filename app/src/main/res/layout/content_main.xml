@@ -9,8 +9,8 @@
     tools:showIn="@layout/app_bar_main">
 
     <fragment
-        android:name="cl.pingon.cotizador.views.main.visit.CategoriesFragment"
-        android:id="@+id/visitsFg"
+        android:name="cl.pingon.cotizador.views.main.machines.CategoriesFragment"
+        android:id="@+id/categoriesFg"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 

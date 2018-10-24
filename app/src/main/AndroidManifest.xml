@@ -5,18 +5,19 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="Servicios Pingon Chile"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
             android:name=".views.login.LoginActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:label="@string/app_name"
+            android:label="Servicios Pingon Chile"
             android:theme="@style/LoginTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,12 +28,9 @@
         <activity
             android:name=".views.main.MainActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:label="@string/title_activity_main"
+            android:label="Servicios Pingon Chile"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".views.main.visit.CategoriesActivity"
-            android:label="@string/title_activity_visit"
-            android:theme="@style/AppTheme"/>
+        <activity android:name=".views.main.MachinesActivity"/>
     </application>
 
 </manifest>

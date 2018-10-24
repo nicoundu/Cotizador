@@ -17,15 +17,15 @@ public class Nodes {
 
     //This is the node to use with the adapter
     public DatabaseReference categories() {
-        return root.child("categories").child(new CurrentUser().uid());
+        return root.child("categories");
     }
 
-    public DatabaseReference machine(String key) {
-        return root.child("machines").child(key);
+    public DatabaseReference machines(String key) {
+        return root.child("machines_list").child(key);
     }
 
     public DatabaseReference machines_details(String key) {
-        return root.child("machines_details").child(key);
+        return root.child("machines").child(key);
     }
 
 }

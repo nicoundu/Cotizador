@@ -1,4 +1,4 @@
-package cl.pingon.cotizador.views.main.visit;
+package cl.pingon.cotizador.views.main.machines;
 
 
 import android.content.Intent;
@@ -6,8 +6,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.DividerItemDecoration;
-import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,6 +19,7 @@ import cl.pingon.cotizador.adapters.CategoriesListener;
 import cl.pingon.cotizador.adapters.CategoriesAdapter;
 import cl.pingon.cotizador.data.Nodes;
 import cl.pingon.cotizador.model.Categories;
+import cl.pingon.cotizador.views.main.MachinesActivity;
 
 public class CategoriesFragment extends Fragment implements CategoriesListener {
 
@@ -43,9 +43,8 @@ public class CategoriesFragment extends Fragment implements CategoriesListener {
 
         RecyclerView recyclerView = view.findViewById(R.id.categoriesRv);
 
-        LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
+        GridLayoutManager layoutManager = new GridLayoutManager(getContext(), 2);
         recyclerView.setLayoutManager(layoutManager);
-        recyclerView.addItemDecoration(new DividerItemDecoration(getContext(), DividerItemDecoration.VERTICAL));
 
         FirebaseRecyclerOptions<Categories> options = new FirebaseRecyclerOptions.Builder<Categories>()
                 .setQuery(new Nodes().categories(), Categories.class)
@@ -60,7 +59,7 @@ public class CategoriesFragment extends Fragment implements CategoriesListener {
     @Override
     public void clicked(Categories categories) {
         //TODO this is the example to pass a key to the other activity
-        Intent intent = new Intent(getActivity(), CategoriesActivity.class);
+        Intent intent = new Intent(getActivity(), MachinesActivity.class);
         intent.putExtra(CATEGORIES, categories);
         startActivity(intent);
     }

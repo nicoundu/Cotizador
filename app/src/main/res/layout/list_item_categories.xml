@@ -11,13 +11,12 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/tile_height"
         android:scaleType="centerCrop"
-        tools:src="@drawable/a" />
+        tools:src="@drawable/ic_launcher_foreground" />
 
-    <ImageView
+    <View
         android:layout_width="match_parent"
         android:layout_height="@dimen/tile_height"
-        android:alpha="0.3"
-        android:background="@color/dark_grey" />
+        android:background="@color/dark_black_transparent" />
 
     <TextView
         android:id="@+id/tile_title"

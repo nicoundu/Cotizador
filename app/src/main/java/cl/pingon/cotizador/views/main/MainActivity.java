@@ -10,8 +10,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
 import cl.pingon.cotizador.R;
-import cl.pingon.cotizador.views.main.inputdata.InputDataDialogFragment;
-
 public class MainActivity extends AppCompatActivity{
 
     @Override
@@ -20,22 +18,6 @@ public class MainActivity extends AppCompatActivity{
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                android.support.v4.app.FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-                android.support.v4.app.Fragment prev = getSupportFragmentManager().findFragmentByTag("inputdata");
-                if (prev != null){
-                    ft.remove(prev);
-
-                } ft.addToBackStack(null);
-
-                InputDataDialogFragment dialogFragment = InputDataDialogFragment.newInstance();
-                dialogFragment.show(ft, "inputdata");
-            }
-        });
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(

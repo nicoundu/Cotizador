@@ -1,8 +1,10 @@
 package cl.pingon.cotizador.model;
 
-public class Machines {
+import java.io.Serializable;
 
-    private String description, key, photo;
+public class Machines implements Serializable {
+
+    private String description, key, photo, name;
 
     public Machines() {
     }
@@ -29,5 +31,13 @@ public class Machines {
 
     public void setPhoto(String photo) {
         this.photo = photo;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }

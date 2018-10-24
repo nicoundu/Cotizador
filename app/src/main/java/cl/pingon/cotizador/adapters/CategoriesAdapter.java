@@ -5,9 +5,12 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.squareup.picasso.Picasso;
 
 import cl.pingon.cotizador.R;
 import cl.pingon.cotizador.model.Categories;
@@ -33,9 +36,7 @@ public class CategoriesAdapter extends FirebaseRecyclerAdapter<Categories, Categ
     @Override
     protected void onBindViewHolder(@NonNull final ViewHolder holder, int position, @NonNull Categories categories) {
 
-        /*holder.clientTv.setText(categories.getName());
-        holder.projectTv.setText(categories.getName());
-        holder.dateTv.setText("");*/
+        holder.textView.setText(categories.getName());
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,7 +46,7 @@ public class CategoriesAdapter extends FirebaseRecyclerAdapter<Categories, Categ
             }
         });
 
-        //Picasso.get().load(categories.getPhoto()).centerCrop().fit().into(holder.imageview);
+        Picasso.get().load(categories.getPhoto()).centerCrop().fit().into(holder.imageView);
 
     }
 
@@ -54,16 +55,14 @@ public class CategoriesAdapter extends FirebaseRecyclerAdapter<Categories, Categ
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
 
-        /*private TextView clientTv;
-        private TextView projectTv;
-        private TextView dateTv;*/
+        private TextView textView;
+        private ImageView imageView;
 
         public ViewHolder(View itemView) {
             super(itemView);
 
-            /*clientTv = itemView.findViewById(R.id.clientTv);
-            projectTv = itemView.findViewById(R.id.projectTv);
-            dateTv = itemView.findViewById(R.id.dateTv);*/
+            textView = itemView.findViewById(R.id.tile_title);
+            imageView = itemView.findViewById(R.id.tile_picture);
 
 
         }
