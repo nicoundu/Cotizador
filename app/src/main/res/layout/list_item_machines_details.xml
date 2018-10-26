@@ -20,16 +20,15 @@
             android:layout_height="match_parent"
             android:fitsSystemWindows="true"
             android:theme="@style/ThemeOverlay.AppCompat.Dark"
-            app:contentScrim="?attr/colorPrimary"
+            app:contentScrim="@color/colorPrimary"
             app:expandedTitleMarginEnd="@dimen/article_keylines"
             app:expandedTitleMarginStart="@dimen/md_keylines"
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
             <ImageView
-                android:id="@+id/image"
+                android:id="@+id/imageIv"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                tools:background="@drawable/a"
                 android:fitsSystemWindows="true"
                 android:scaleType="centerCrop"
                 app:layout_collapseMode="parallax" />
@@ -37,7 +36,7 @@
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
+                android:layout_height="?actionBarSize"
                 app:layout_collapseMode="pin"
                 app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
@@ -58,6 +57,7 @@
             android:paddingTop="@dimen/md_keylines">
 
             <TextView
+                android:id="@+id/nameTitleTv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/colorAccent"
@@ -73,12 +73,14 @@
                 tools:text="texto con el nombre" />
 
             <TextView
+                android:id="@+id/configurationTitleTv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/colorAccent"
                 android:text="Configuración"
                 android:textSize="@dimen/article_titles"
-                android:layout_marginBottom="@dimen/md_keylines" />
+                android:layout_marginBottom="@dimen/md_keylines"
+                android:layout_marginTop="@dimen/md_keylines"/>
 
             <TextView
                 android:id="@+id/configurationTv"
@@ -87,6 +89,7 @@
                 tools:text="texto con la configuración" />
 
             <TextView
+                android:id="@+id/electricConsumptionTitleTv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/colorAccent"
@@ -96,12 +99,13 @@
                 android:layout_marginTop="@dimen/md_keylines" />
 
             <TextView
-                android:id="@+id/electric_consumptionTv"
+                android:id="@+id/electricConsumptionTv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 tools:text="texto con el consumo electrico" />
 
             <TextView
+                android:id="@+id/horizontalReachTitleTv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/colorAccent"
@@ -111,12 +115,13 @@
                 android:layout_marginTop="@dimen/md_keylines" />
 
             <TextView
-                android:id="@+id/horizontal_reachTv"
+                android:id="@+id/horizontalReachTv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 tools:text="texto con el alcance horizontal" />
 
             <TextView
+                android:id="@+id/verticalReachTitleTv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/colorAccent"
@@ -126,12 +131,13 @@
                 android:layout_marginTop="@dimen/md_keylines" />
 
             <TextView
-                android:id="@+id/vertical_reachTv"
+                android:id="@+id/verticalReachTv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 tools:text="texto con el alcance vertical" />
 
             <TextView
+                android:id="@+id/maxLoadTitleTv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/colorAccent"
@@ -141,10 +147,26 @@
                 android:layout_marginTop="@dimen/md_keylines" />
 
             <TextView
-                android:id="@+id/max_loadTv"
+                android:id="@+id/maxLoadTv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 tools:text="texto con la carga maxima" />
+
+            <TextView
+                android:id="@+id/commentsTitleTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorAccent"
+                android:text="Comentarios"
+                android:textSize="@dimen/article_titles"
+                android:layout_marginBottom="@dimen/md_keylines"
+                android:layout_marginTop="@dimen/md_keylines" />
+
+            <EditText
+                android:id="@+id/commentsEt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Ingrese aqui sus comentarios"/>
 
 
 
