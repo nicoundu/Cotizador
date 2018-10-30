@@ -1,4 +1,6 @@
 package cl.pingon.cotizador.views.main.machines;
 
-public class MachinesDetailsFragment {
+import android.app.Fragment;
+
+public class MachinesDetailsFragment extends Fragment{
 }

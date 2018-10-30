@@ -1,5 +1,6 @@
 package cl.pingon.cotizador.views.main;
 
+import android.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -23,6 +24,8 @@ import cl.pingon.cotizador.model.Machines;
 import cl.pingon.cotizador.model.MachinesDetails;
 import cl.pingon.cotizador.views.main.machines.CategoriesFragment;
 import cl.pingon.cotizador.views.main.machines.MachinesListFragment;
+
+import static cl.pingon.cotizador.R.id.commentsFg;
 
 public class MachinesDetailsActivity extends AppCompatActivity {
 
@@ -49,7 +52,7 @@ public class MachinesDetailsActivity extends AppCompatActivity {
         final TextView horizontalReachTv = findViewById(R.id.horizontalReachTv);
         final TextView verticalReachTv = findViewById(R.id.verticalReachTv);
         final TextView maxLoadTv = findViewById(R.id.maxLoadTv);
-        final EditText commentsEt = findViewById(R.id.commentsEt);
+        final Fragment commentsFg = findViewById(R.id.commentsFg);
 
         DatabaseReference root = FirebaseDatabase.getInstance().getReference();
         root.child("machines").child(key).addListenerForSingleValueEvent(new ValueEventListener() {

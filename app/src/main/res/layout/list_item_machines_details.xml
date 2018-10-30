@@ -152,21 +152,11 @@
                 android:layout_height="wrap_content"
                 tools:text="texto con la carga maxima" />
 
-            <TextView
-                android:id="@+id/commentsTitleTv"
+            <fragment
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/colorAccent"
-                android:text="Comentarios"
-                android:textSize="@dimen/article_titles"
-                android:layout_marginBottom="@dimen/md_keylines"
-                android:layout_marginTop="@dimen/md_keylines" />
-
-            <EditText
-                android:id="@+id/commentsEt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:hint="Ingrese aqui sus comentarios"/>
+                android:id="@+id/commentsFg">
+            </fragment>
 
 
 
