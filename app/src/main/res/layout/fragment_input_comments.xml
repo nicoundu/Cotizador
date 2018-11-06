@@ -6,6 +6,7 @@
     tools:context=".views.main.inputdata.InputCommentsFragment">
 
     <EditText
+        android:id="@+id/commentsEt"
         android:hint="Ingrese su comentario"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

@@ -1,6 +1,8 @@
 package cl.pingon.cotizador.views.main.machines;
 
+import cl.pingon.cotizador.model.MachinesDetails;
+
 public interface MachinesDetailsCallback {
 
-    void getMachinesDetails(String key);
+    void done(MachinesDetails machinesDetails);
 }
