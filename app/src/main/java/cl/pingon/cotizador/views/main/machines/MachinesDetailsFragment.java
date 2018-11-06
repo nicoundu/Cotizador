@@ -52,7 +52,8 @@ public class MachinesDetailsFragment extends Fragment implements MachinesDetails
         inputCommentsFragment = view.findViewById(R.id.commentsFg);
 
         String key = getActivity().getIntent().getStringExtra(MACHINES_DETAILS);
-        GetMachine(this).withKey(key);
+
+
 
     }
 
