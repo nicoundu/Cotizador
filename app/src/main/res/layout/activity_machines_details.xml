@@ -7,9 +7,9 @@
     tools:context=".views.main.MachinesDetailsActivity">
 
     <fragment
-        android:name="cl.pingon.cotizador.views.main.machines.MachinesDetailsFragment"
         android:id="@+id/machinesDetailsFg"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:name="cl.pingon.cotizador.views.main.machines.MachinesDetailsFragment"/>
 
 </android.support.constraint.ConstraintLayout>
