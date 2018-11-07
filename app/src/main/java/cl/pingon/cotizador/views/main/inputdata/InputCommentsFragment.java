@@ -8,13 +8,20 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 
 import cl.pingon.cotizador.R;
+import cl.pingon.cotizador.data.Nodes;
+import cl.pingon.cotizador.presenters.SendComments;
+
+import static cl.pingon.cotizador.R.id.commentsEt;
 
 public class InputCommentsFragment extends Fragment {
 
     private EditText commentEt;
+    private ImageButton button;
 
     public InputCommentsFragment() {
     }
@@ -31,5 +38,17 @@ public class InputCommentsFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         commentEt = view.findViewById(R.id.commentsFg);
+        button = view.findViewById(R.id.saveBtn);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String comment = commentEt.getText().toString();
+                new SendComments().fromUser(key, comment);
+            }
+        });
+
+
     }
+
 }

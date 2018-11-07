@@ -14,10 +14,9 @@ import android.widget.TextView;
 import com.squareup.picasso.Picasso;
 
 import cl.pingon.cotizador.R;
-import cl.pingon.cotizador.data.Nodes;
 import cl.pingon.cotizador.model.Machines;
 import cl.pingon.cotizador.model.MachinesDetails;
-import cl.pingon.cotizador.views.main.MachinesDetailsActivity;
+import cl.pingon.cotizador.presenters.GetMachines;
 
 public class MachinesDetailsFragment extends Fragment implements MachinesDetailsCallback{
 

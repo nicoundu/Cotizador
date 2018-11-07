@@ -45,10 +45,6 @@ public class MachinesDetailsActivity extends AppCompatActivity {
 
         DatabaseReference root = FirebaseDatabase.getInstance().getReference();
 
-        String comments = InputCommentsFragment.getComments();
-        if (commentsEt != null){
-            commentsEt.setText(comments);
-        }
 
     }
 
@@ -63,9 +59,4 @@ public class MachinesDetailsActivity extends AppCompatActivity {
 
     }
 
-    @Override
-    protected void onPause() {
-        super.onPause();
-        new Nodes().machines(key).child("comments").setValue(commentsEt.getText().toString());
-    }
 }

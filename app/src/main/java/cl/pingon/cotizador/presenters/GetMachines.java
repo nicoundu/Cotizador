@@ -1,4 +1,4 @@
-package cl.pingon.cotizador.views.main.machines;
+package cl.pingon.cotizador.presenters;
 
 import android.support.annotation.NonNull;
 
@@ -8,6 +8,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import cl.pingon.cotizador.data.Nodes;
 import cl.pingon.cotizador.model.MachinesDetails;
+import cl.pingon.cotizador.views.main.machines.MachinesDetailsCallback;
 
 public class GetMachines {
 
@@ -18,8 +19,6 @@ public class GetMachines {
     }
     
     public void withKey(String key) {
-        //TODO I don't know wich nodes you have, replace SOMETHING with the appropiate
-        //I put the node machines_details, but I dont know if it has to go with a key or not
          new Nodes().machines(key).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {

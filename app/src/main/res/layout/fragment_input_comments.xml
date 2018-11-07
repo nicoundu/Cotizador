@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="horizontal"
     tools:context=".views.main.inputdata.InputCommentsFragment">
 
     <EditText
         android:id="@+id/commentsEt"
-        android:hint="Ingrese su comentario"
-        android:layout_width="match_parent"
+        android:layout_width="290dp"
         android:layout_height="wrap_content"
-        android:lines="3"/>
+        android:hint="Ingrese su comentario"
+        android:lines="3"
+        android:padding="8dp"/>
 
-</FrameLayout>
+    <ImageButton
+        android:padding="8dp"
+        android:id="@+id/saveBtn"
+        android:layout_width="82dp"
+        android:layout_height="81dp"
+        android:src="@drawable/ic_send_black_24dp" />
+
+</LinearLayout>
