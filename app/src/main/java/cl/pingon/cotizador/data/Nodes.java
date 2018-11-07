@@ -33,23 +33,7 @@ public class Nodes {
         return root.child("machines_list").child(key);
     }
 
-    /*public DatabaseReference machines_details(String key) {
-        return root.child("machines").child(key).addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-
-                MachinesDetails machinesDetails = dataSnapshot.getValue(MachinesDetails.class);
-
-                Picasso.get().load(machinesDetails.getPhoto()).centerCrop().fit().into(imageIv);
-
-
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
-    }*/
+    public DatabaseReference machines_details(String key) {return root.child("machines").child(key);
+    }
 
 }
