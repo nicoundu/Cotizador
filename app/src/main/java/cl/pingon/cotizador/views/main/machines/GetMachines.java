@@ -15,11 +15,17 @@ public class GetMachines {
     private MachinesDetailsCallback callback;
 
     public GetMachines(MachinesDetailsCallback callback) {
-        this.callback = callback("machines").child(key).addListenerForSingleValueEvent(new ValueEventListener() {
+        this.callback = callback;
+    }
+    
+    public void withKey(String key) {
+        //TODO I don't know wich nodes you have, replace SOMETHING with the appropiate
+         new Nodes().SOMETHING().child(key).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
                 MachinesDetails machinesDetails = dataSnapshot.getValue(MachinesDetails.class);
+                callback.done(machinesDetails);
             }
 
             @Override
@@ -27,6 +33,6 @@ public class GetMachines {
 
             }
         });
-
     }
+
 }
