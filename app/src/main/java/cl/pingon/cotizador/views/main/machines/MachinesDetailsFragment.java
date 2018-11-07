@@ -51,7 +51,7 @@ public class MachinesDetailsFragment extends Fragment implements MachinesDetails
         maxLoadTv = view.findViewById(R.id.maxLoadTv);
 
         String key = getActivity().getIntent().getStringExtra(MACHINES_DETAILS);
-
+        new GetMachines(this).withKey(key);
 
 
     }
