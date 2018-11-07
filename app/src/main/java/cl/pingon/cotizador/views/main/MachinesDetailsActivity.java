@@ -14,12 +14,15 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import cl.pingon.cotizador.R;
+import cl.pingon.cotizador.data.Nodes;
 import cl.pingon.cotizador.model.Machines;
 import cl.pingon.cotizador.model.MachinesDetails;
+import cl.pingon.cotizador.views.main.inputdata.InputCommentsFragment;
 import cl.pingon.cotizador.views.main.machines.MachinesDetailsCallback;
 import cl.pingon.cotizador.views.main.machines.MachinesDetailsFragment;
 import cl.pingon.cotizador.views.main.machines.MachinesListFragment;
 
+import static cl.pingon.cotizador.R.id.commentsEt;
 import static cl.pingon.cotizador.R.id.commentsFg;
 import static cl.pingon.cotizador.R.id.root;
 
@@ -42,6 +45,11 @@ public class MachinesDetailsActivity extends AppCompatActivity {
 
         DatabaseReference root = FirebaseDatabase.getInstance().getReference();
 
+        String comments = InputCommentsFragment.getComments();
+        if (commentsEt != null){
+            commentsEt.setText(comments);
+        }
+
     }
 
     public class GetMachine {
@@ -55,5 +63,9 @@ public class MachinesDetailsActivity extends AppCompatActivity {
 
     }
 
-
+    @Override
+    protected void onPause() {
+        super.onPause();
+        new Nodes().machines(key).child("comments").setValue(commentsEt.getText().toString());
+    }
 }

@@ -2,7 +2,7 @@ package cl.pingon.cotizador.model;
 
 public class MachinesDetails {
 
-    private String configuration, electric_consumption, horizontal_reach, key, max_load, name, photo, vertical_reach;
+    private String configuration, electric_consumption, horizontal_reach, key, max_load, name, photo, vertical_reach, comments;
 
     public MachinesDetails() {
     }
@@ -69,5 +69,13 @@ public class MachinesDetails {
 
     public void setVertical_reach(String vertical_reach) {
         this.vertical_reach = vertical_reach;
+    }
+
+    public String getComments() {
+        return comments;
+    }
+
+    public void setComments(String comments) {
+        this.comments = comments;
     }
 }
