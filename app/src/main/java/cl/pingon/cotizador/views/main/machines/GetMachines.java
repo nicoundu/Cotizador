@@ -15,12 +15,7 @@ public class GetMachines {
     private MachinesDetailsCallback callback;
 
     public GetMachines(MachinesDetailsCallback callback) {
-        this.callback = callback;
-
-    }
-
-    public void withKey(String key) {
-        root.child("machines").child(key).addListenerForSingleValueEvent(new ValueEventListener() {
+        this.callback = callbacd("machines").child(key).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 

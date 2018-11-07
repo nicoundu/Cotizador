@@ -49,7 +49,6 @@ public class MachinesDetailsFragment extends Fragment implements MachinesDetails
         verticalReachTv = view.findViewById(R.id.verticalReachTv);
         horizontalReachTv = view.findViewById(R.id.horizontalReachTv);
         maxLoadTv = view.findViewById(R.id.maxLoadTv);
-        inputCommentsFragment = view.findViewById(R.id.commentsFg);
 
         String key = getActivity().getIntent().getStringExtra(MACHINES_DETAILS);
 
@@ -70,11 +69,6 @@ public class MachinesDetailsFragment extends Fragment implements MachinesDetails
 
     }
 
-    @Override
-    public void onPause() {
-        super.onPause();
-        new Nodes().machines().child(key).child("comments").setValue(commentsEt.getText().toString());
-    }
 
 
 }
