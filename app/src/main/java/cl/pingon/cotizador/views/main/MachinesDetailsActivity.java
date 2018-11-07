@@ -17,6 +17,7 @@ import cl.pingon.cotizador.R;
 import cl.pingon.cotizador.model.Machines;
 import cl.pingon.cotizador.model.MachinesDetails;
 import cl.pingon.cotizador.views.main.machines.MachinesDetailsCallback;
+import cl.pingon.cotizador.views.main.machines.MachinesDetailsFragment;
 import cl.pingon.cotizador.views.main.machines.MachinesListFragment;
 
 import static cl.pingon.cotizador.R.id.commentsFg;
@@ -34,7 +35,7 @@ public class MachinesDetailsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_machines_details);
 
 
-        Machines machines = (Machines) getIntent().getSerializableExtra(MachinesListFragment.MACHINES);
+        Machines machines = (Machines) getIntent().getSerializableExtra(MachinesDetailsFragment.MACHINES_DETAILS);
         getSupportActionBar().setTitle(machines.getName());
 
         key = machines.getKey();

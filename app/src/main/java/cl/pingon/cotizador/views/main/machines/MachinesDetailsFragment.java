@@ -15,6 +15,7 @@ import com.squareup.picasso.Picasso;
 
 import cl.pingon.cotizador.R;
 import cl.pingon.cotizador.data.Nodes;
+import cl.pingon.cotizador.model.Machines;
 import cl.pingon.cotizador.model.MachinesDetails;
 import cl.pingon.cotizador.views.main.MachinesDetailsActivity;
 
@@ -50,8 +51,8 @@ public class MachinesDetailsFragment extends Fragment implements MachinesDetails
         horizontalReachTv = view.findViewById(R.id.horizontalReachTv);
         maxLoadTv = view.findViewById(R.id.maxLoadTv);
 
-        String key = getActivity().getIntent().getStringExtra(MACHINES_DETAILS);
-        new GetMachines(this).withKey(key);
+        Machines machines = (Machines) getActivity().getIntent().getSerializableExtra(MACHINES_DETAILS);
+        new GetMachines(this).withKey(machines.getKey());
 
 
     }

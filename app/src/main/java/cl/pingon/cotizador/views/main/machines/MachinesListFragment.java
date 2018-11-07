@@ -64,7 +64,7 @@ public class MachinesListFragment extends Fragment implements MachinesListener {
     @Override
     public void clicked(Machines machines) {
         Intent intent = new Intent(getActivity(), MachinesDetailsActivity.class);
-        intent.putExtra(MACHINES, machines);
+        intent.putExtra(MachinesDetailsFragment.MACHINES_DETAILS, machines);
         startActivity(intent);
     }
 }

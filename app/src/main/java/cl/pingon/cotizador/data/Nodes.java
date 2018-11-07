@@ -33,7 +33,7 @@ public class Nodes {
         return root.child("machines_list").child(key);
     }
 
-    public DatabaseReference machines(String key) {return root.child("machines_list").child(key);
+    public DatabaseReference machines(String key) {return root.child("machines").child(key);
     }
 
 }
