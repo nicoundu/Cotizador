@@ -52,7 +52,7 @@ public class MachinesListFragment extends Fragment implements MachinesListener {
 
         Categories categories = (Categories) getActivity().getIntent().getSerializableExtra(CategoriesFragment.CATEGORIES);
         FirebaseRecyclerOptions<Machines> options = new FirebaseRecyclerOptions.Builder<Machines>()
-                .setQuery(new Nodes().machines(categories.getKey()), Machines.class)
+                .setQuery(new Nodes().machines_list(categories.getKey()), Machines.class)
                 .setLifecycleOwner(this)
                 .build();
 

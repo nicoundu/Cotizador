@@ -29,11 +29,11 @@ public class Nodes {
         return root.child("categories");
     }
 
-    public DatabaseReference machines(String key) {
+    public DatabaseReference machines_list(String key) {
         return root.child("machines_list").child(key);
     }
 
-    public DatabaseReference machines_details(String key) {return root.child("machines").child(key);
+    public DatabaseReference machines(String key) {return root.child("machines_list").child(key);
     }
 
 }
