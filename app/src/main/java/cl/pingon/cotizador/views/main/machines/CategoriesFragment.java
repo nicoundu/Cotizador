@@ -58,7 +58,6 @@ public class CategoriesFragment extends Fragment implements CategoriesListener {
 
     @Override
     public void clicked(Categories categories) {
-        //TODO this is the example to pass a key to the other activity
         Intent intent = new Intent(getActivity(), MachinesActivity.class);
         intent.putExtra(CATEGORIES, categories);
         startActivity(intent);

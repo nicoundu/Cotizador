@@ -24,6 +24,7 @@ import cl.pingon.cotizador.adapters.MachinesListener;
 import cl.pingon.cotizador.data.Nodes;
 import cl.pingon.cotizador.model.Categories;
 import cl.pingon.cotizador.model.Machines;
+import cl.pingon.cotizador.views.main.MachinesDetailsActivity;
 
 public class MachinesListFragment extends Fragment implements MachinesListener {
 
@@ -62,7 +63,7 @@ public class MachinesListFragment extends Fragment implements MachinesListener {
 
     @Override
     public void clicked(Machines machines) {
-        Intent intent = new Intent(getActivity(), MachinesListFragment.class);
+        Intent intent = new Intent(getActivity(), MachinesDetailsActivity.class);
         intent.putExtra(MACHINES, machines);
         startActivity(intent);
     }
