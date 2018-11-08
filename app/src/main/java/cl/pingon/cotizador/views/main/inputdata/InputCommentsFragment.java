@@ -51,8 +51,9 @@ public class InputCommentsFragment extends Fragment {
             }
         });
 
-        Machines machines = (Machines) getActivity().getIntent().getSerializableExtra(MACHINES_DETAILS);
-        new GetMachines(this).withKey(machines.getKey());
+        SendComments sendComments = (SendComments) getActivity().getIntent().getSerializableExtra(MACHINES_DETAILS);
+        new SendComments().fromUser();
+
 
 
 
