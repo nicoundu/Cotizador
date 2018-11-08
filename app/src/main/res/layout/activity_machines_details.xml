@@ -13,4 +13,6 @@
         android:layout_height="match_parent"
         android:name="cl.pingon.cotizador.views.main.machines.MachinesDetailsFragment"/>
 
+
+
 </LinearLayout>

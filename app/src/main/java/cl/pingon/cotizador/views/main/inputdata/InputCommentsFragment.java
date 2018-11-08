@@ -14,12 +14,15 @@ import android.widget.ImageButton;
 
 import cl.pingon.cotizador.R;
 import cl.pingon.cotizador.data.Nodes;
+import cl.pingon.cotizador.model.Machines;
+import cl.pingon.cotizador.presenters.GetMachines;
 import cl.pingon.cotizador.presenters.SendComments;
 
 import static cl.pingon.cotizador.R.id.commentsEt;
 
 public class InputCommentsFragment extends Fragment {
 
+    public static final String MACHINES_DETAILS = "cl.pingon.cotizador.views.main.visit.KEY.MACHINES_DETAILS";
     private EditText commentEt;
     private ImageButton button;
 
@@ -47,6 +50,9 @@ public class InputCommentsFragment extends Fragment {
                 new SendComments().fromUser(key, comment);
             }
         });
+
+        SendComments sendComments = (SendComments) getActivity().getIntent().getSerializableExtra(MACHINES_DETAILS);
+        new SendComments().fromUser(key, comment);
 
 
     }
