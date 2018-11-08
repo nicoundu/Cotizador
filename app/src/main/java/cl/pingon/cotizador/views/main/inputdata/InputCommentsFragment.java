@@ -46,16 +46,10 @@ public class InputCommentsFragment extends Fragment {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String comment = commentEt.getText().toString();
-                new SendComments().fromUser(key, comment);
+                Machines machines = (Machines) getActivity().getIntent().getSerializableExtra(MACHINES_DETAILS);
+                new SendComments().fromUser(machines.getKey(), commentEt.getText().toString());
             }
         });
-
-        SendComments sendComments = (SendComments) getActivity().getIntent().getSerializableExtra(MACHINES_DETAILS);
-        new SendComments().fromUser();
-
-
-
 
 
     }
