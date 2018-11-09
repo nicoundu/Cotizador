@@ -10,11 +10,7 @@ public class SendComments {
 
     public void fromUser(String key, String comment) {
 
-
-      //  new Nodes().user(key).child("comments").child(new CurrentUser(fromUser())).child(MACHINE_KEY)
-
-
-       // new Nodes().machines(key).child("comments").setValue(key, comment);
+        new Nodes().comments(key).push().setValue(comment);
 
 
     }
