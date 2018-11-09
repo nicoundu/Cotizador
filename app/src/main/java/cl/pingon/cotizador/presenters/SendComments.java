@@ -8,9 +8,9 @@ import cl.pingon.cotizador.views.main.inputdata.InputCommentsFragment;
 public class SendComments {
 
 
-    public void fromUser(String key, String comment) {
+    public void fromUser(String key, String comments) {
 
-        new Nodes().comments(key).push().setValue(comment);
+        new Nodes().comments(key).push().setValue(comments);
 
 
     }
