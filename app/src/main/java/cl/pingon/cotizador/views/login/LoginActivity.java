@@ -17,7 +17,6 @@ public class LoginActivity extends AppCompatActivity {
 
     private static final int RC_SIGN_IN = 007;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,7 +28,6 @@ public class LoginActivity extends AppCompatActivity {
         } else {
             signUp();
         }
-
 
     }
 
@@ -69,6 +67,5 @@ public class LoginActivity extends AppCompatActivity {
         finish();
 
     }
-
 
 }

@@ -26,10 +26,8 @@ public class CategoriesFragment extends Fragment implements CategoriesListener {
     public static final String CATEGORIES = "cl.pingon.cotizador.views.main.visit.KEY.CATEGORIES";
     private CategoriesAdapter adapter;
 
-
     public CategoriesFragment() {
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

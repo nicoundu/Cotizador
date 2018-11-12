@@ -7,13 +7,11 @@ import cl.pingon.cotizador.views.main.inputdata.InputCommentsFragment;
 
 public class SendComments {
 
-
     public void fromUser(String key, String comments) {
 
-        if (comments.replace(" ","").length() ==0)return;
+        if (comments.replace(" "," ").length() ==0)return;
 
         new Nodes().comments(key).push().setValue(comments);
-
 
     }
 }

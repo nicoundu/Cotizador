@@ -15,6 +15,7 @@ import android.widget.ImageButton;
 import cl.pingon.cotizador.R;
 import cl.pingon.cotizador.data.Nodes;
 import cl.pingon.cotizador.model.Machines;
+import cl.pingon.cotizador.model.MachinesDetails;
 import cl.pingon.cotizador.presenters.GetMachines;
 import cl.pingon.cotizador.presenters.SendComments;
 
@@ -27,7 +28,6 @@ public class InputCommentsFragment extends Fragment {
 
     public InputCommentsFragment() {
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -49,7 +49,6 @@ public class InputCommentsFragment extends Fragment {
                 commentEt.setText("");
             }
         });
-
 
     }
 

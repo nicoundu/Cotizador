@@ -40,6 +40,7 @@ public class MachinesAdapter extends FirebaseRecyclerAdapter<Machines, MachinesA
         });
 
         Picasso.get().load(machines.getPhoto()).centerCrop().fit().into(holder.imageView);
+
     }
 
     @NonNull
@@ -52,7 +53,6 @@ public class MachinesAdapter extends FirebaseRecyclerAdapter<Machines, MachinesA
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
-
         private ImageView imageView;
         private TextView titleTv, descriptionTv;
         private Button button;
@@ -64,7 +64,6 @@ public class MachinesAdapter extends FirebaseRecyclerAdapter<Machines, MachinesA
             titleTv = itemView.findViewById(R.id.card_title);
             descriptionTv = itemView.findViewById(R.id.card_text);
             button = itemView.findViewById(R.id.action_button);
-
 
         }
     }

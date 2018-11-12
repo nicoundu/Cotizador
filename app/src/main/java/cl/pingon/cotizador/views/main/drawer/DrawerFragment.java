@@ -21,10 +21,8 @@ import cl.pingon.cotizador.R;
 
 public class DrawerFragment extends Fragment {
 
-
     public DrawerFragment() {
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

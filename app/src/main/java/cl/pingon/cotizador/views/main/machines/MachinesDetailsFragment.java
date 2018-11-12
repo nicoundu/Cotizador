@@ -22,15 +22,12 @@ public class MachinesDetailsFragment extends Fragment implements MachinesDetails
 
     public static final String MACHINES_DETAILS = "cl.pingon.cotizador.views.main.visit.KEY.MACHINES_DETAILS";
 
-
     private ImageView imageView;
     private TextView nameTv, configurationTv, electricConsumptionTv, verticalReachTv, horizontalReachTv, maxLoadTv;
     private Fragment inputCommentsFragment;
 
-
     public MachinesDetailsFragment() {
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -52,9 +49,7 @@ public class MachinesDetailsFragment extends Fragment implements MachinesDetails
         Machines machines = (Machines) getActivity().getIntent().getSerializableExtra(MACHINES_DETAILS);
         new GetMachines(this).withKey(machines.getKey());
 
-
     }
-
 
     @Override
     public void done(MachinesDetails machinesDetails) {
@@ -67,6 +62,5 @@ public class MachinesDetailsFragment extends Fragment implements MachinesDetails
         maxLoadTv.setText(machinesDetails.getMax_load());
 
     }
-
 
 }

@@ -32,7 +32,6 @@ public class CategoriesAdapter extends FirebaseRecyclerAdapter<Categories, Categ
         return viewHolder;
     }
 
-
     @Override
     protected void onBindViewHolder(@NonNull final ViewHolder holder, int position, @NonNull Categories categories) {
 
@@ -50,9 +49,7 @@ public class CategoriesAdapter extends FirebaseRecyclerAdapter<Categories, Categ
 
     }
 
-
     public static class ViewHolder extends RecyclerView.ViewHolder {
-
 
         private TextView textView;
         private ImageView imageView;
@@ -63,14 +60,8 @@ public class CategoriesAdapter extends FirebaseRecyclerAdapter<Categories, Categ
             textView = itemView.findViewById(R.id.tile_title);
             imageView = itemView.findViewById(R.id.tile_picture);
 
-
         }
 
-
     }
-
-
-    //create recycler holder, this assume you have the row list_item..
-    //extend to firebase recycler adapter
 
 }
