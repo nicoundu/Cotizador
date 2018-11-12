@@ -37,7 +37,7 @@ public class Nodes {
     }
 
     public DatabaseReference comments(String key) {
-        return root.child("comments").child(new CurrentUser().uid());
+        return root.child("comments").child(new CurrentUser().uid()).child(key);
     }
 
 }

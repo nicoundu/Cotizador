@@ -24,7 +24,6 @@ public class InputCommentsFragment extends Fragment {
 
     public static final String MACHINES_DETAILS = "cl.pingon.cotizador.views.main.visit.KEY.MACHINES_DETAILS";
     private EditText commentEt;
-    private ImageButton button;
 
     public InputCommentsFragment() {
     }
@@ -41,13 +40,13 @@ public class InputCommentsFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         commentEt = view.findViewById(R.id.commentsEt);
-        button = view.findViewById(R.id.saveBtn);
 
-        button.setOnClickListener(new View.OnClickListener() {
+        view.findViewById(R.id.saveBtn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Machines machines = (Machines) getActivity().getIntent().getSerializableExtra(MACHINES_DETAILS);
                 new SendComments().fromUser(machines.getKey(), commentEt.getText().toString());
+                commentEt.setText("");
             }
         });
 
