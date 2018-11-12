@@ -17,9 +17,9 @@ public class GetMachines {
     public GetMachines(MachinesDetailsCallback callback) {
         this.callback = callback;
     }
-    
+
     public void withKey(String key) {
-         new Nodes().machines(key).addListenerForSingleValueEvent(new ValueEventListener() {
+        new Nodes().machines(key).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 

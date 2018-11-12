@@ -22,38 +22,39 @@
             tools:src="@drawable/ic_launcher_foreground" />
 
         <TextView
+            android:background="@color/dark_black_transparent"
             android:id="@+id/card_title"
             android:layout_width="match_parent"
             android:layout_height="@dimen/card_title_height"
             android:layout_alignBottom="@+id/card_image"
             android:layout_marginLeft="@dimen/md_keylines"
-            tools:text="nombre equipo"
             android:textAppearance="@style/TextAppearance.AppCompat.Title"
-            android:textColor="@android:color/white" />
+            android:textColor="@android:color/white"
+            tools:text="Nombre equipo" />
 
         <TextView
             android:id="@+id/card_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/card_image"
-            android:layout_marginLeft="@dimen/md_keylines"
-            android:layout_marginTop="@dimen/md_keylines"
             android:layout_marginBottom="@dimen/md_keylines"
+            android:layout_marginLeft="@dimen/md_keylines"
             android:layout_marginRight="@dimen/md_keylines"
-            tools:text="Descripción"
+            android:layout_marginTop="@dimen/md_keylines"
             android:ellipsize="end"
-            android:singleLine="true"
+            android:lines="2"
             android:textColor="@color/dark_grey"
-            android:textSize="@dimen/article_subheading" />
+            android:textSize="@dimen/article_subheading"
+            tools:text="Descripción" />
 
         <Button
             android:id="@+id/action_button"
+            style="?android:attr/borderlessButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/card_text"
-            style="?android:attr/borderlessButtonStyle"
-            android:textColor="@color/colorPrimary"
-            android:text="Ver Equipo" />
+            android:text="Ver Equipo"
+            android:textColor="@color/colorPrimary" />
 
     </RelativeLayout>
 </android.support.v7.widget.CardView>

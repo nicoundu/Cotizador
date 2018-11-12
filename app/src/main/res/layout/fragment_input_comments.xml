@@ -13,13 +13,14 @@
         android:layout_weight="1"
         android:hint="Ingrese su comentario"
         android:lines="3"
-        android:padding="8dp"/>
+        android:padding="8dp"
+        android:textAlignment="textStart" />
 
     <ImageButton
-        android:padding="8dp"
         android:id="@+id/saveBtn"
         android:layout_width="82dp"
         android:layout_height="81dp"
+        android:padding="8dp"
         android:src="@drawable/ic_send_black_24dp" />
 
 </LinearLayout>

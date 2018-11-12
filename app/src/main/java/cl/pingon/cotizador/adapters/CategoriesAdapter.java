@@ -51,7 +51,6 @@ public class CategoriesAdapter extends FirebaseRecyclerAdapter<Categories, Categ
     }
 
 
-
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
 
@@ -69,7 +68,6 @@ public class CategoriesAdapter extends FirebaseRecyclerAdapter<Categories, Categ
 
 
     }
-
 
 
     //create recycler holder, this assume you have the row list_item..

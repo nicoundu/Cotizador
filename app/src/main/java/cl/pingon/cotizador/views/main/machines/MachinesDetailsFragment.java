@@ -18,7 +18,7 @@ import cl.pingon.cotizador.model.Machines;
 import cl.pingon.cotizador.model.MachinesDetails;
 import cl.pingon.cotizador.presenters.GetMachines;
 
-public class MachinesDetailsFragment extends Fragment implements MachinesDetailsCallback{
+public class MachinesDetailsFragment extends Fragment implements MachinesDetailsCallback {
 
     public static final String MACHINES_DETAILS = "cl.pingon.cotizador.views.main.visit.KEY.MACHINES_DETAILS";
 
@@ -35,7 +35,6 @@ public class MachinesDetailsFragment extends Fragment implements MachinesDetails
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_machines_details, container, false);
     }
 
@@ -68,7 +67,6 @@ public class MachinesDetailsFragment extends Fragment implements MachinesDetails
         maxLoadTv.setText(machinesDetails.getMax_load());
 
     }
-
 
 
 }

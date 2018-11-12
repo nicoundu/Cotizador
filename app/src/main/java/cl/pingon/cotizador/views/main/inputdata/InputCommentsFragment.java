@@ -40,7 +40,7 @@ public class InputCommentsFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        commentEt = view.findViewById(R.id.commentsFg);
+        commentEt = view.findViewById(R.id.commentsEt);
         button = view.findViewById(R.id.saveBtn);
 
         button.setOnClickListener(new View.OnClickListener() {

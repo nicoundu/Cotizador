@@ -24,7 +24,6 @@ public class Nodes {
         return users().child(key);
     }
 
-    //This is the node to use with the adapter
     public DatabaseReference categories() {
         return root.child("categories");
     }
@@ -33,10 +32,12 @@ public class Nodes {
         return root.child("machines_list").child(key);
     }
 
-    public DatabaseReference machines(String key) {return root.child("machines").child(key);
+    public DatabaseReference machines(String key) {
+        return root.child("machines").child(key);
     }
 
-    public DatabaseReference comments(String key) {return root.child("comments").child(new CurrentUser().uid());
+    public DatabaseReference comments(String key) {
+        return root.child("comments").child(new CurrentUser().uid());
     }
 
 }

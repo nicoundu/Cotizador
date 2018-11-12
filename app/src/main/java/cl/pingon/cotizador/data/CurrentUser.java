@@ -15,5 +15,7 @@ public class CurrentUser {
         return getCurrentUser().getEmail();
     }
 
-    public String uid() {return currentUser.getUid(); }
+    public String uid() {
+        return currentUser.getUid();
+    }
 }
