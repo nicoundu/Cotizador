@@ -26,6 +26,7 @@ public class CommentsFragment extends Fragment {
 
     public static final String MACHINES_DETAILS = "cl.pingon.cotizador.views.main.visit.KEY.MACHINES_DETAILS";
     private CommentsAdapter adapter;
+    private RecyclerView recyclerView;
 
     public CommentsFragment() {
     }
@@ -40,9 +41,9 @@ public class CommentsFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        RecyclerView recyclerView = view.findViewById(R.id.commentsRv);
-        Machines machines = (Machines) getActivity().getIntent().getSerializableExtra(MACHINES_DETAILS);
+        recyclerView = view.findViewById(R.id.commentsRv);
 
+        Machines machines = (Machines) getActivity().getIntent().getSerializableExtra(MACHINES_DETAILS);
 
         FirebaseRecyclerOptions<String> options = new FirebaseRecyclerOptions.Builder<String>()
                 .setQuery(new Nodes().comments(machines.getKey()), String.class)
