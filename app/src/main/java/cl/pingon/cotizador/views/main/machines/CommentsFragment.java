@@ -19,6 +19,7 @@ import cl.pingon.cotizador.adapters.CategoriesAdapter;
 import cl.pingon.cotizador.adapters.CommentsAdapter;
 import cl.pingon.cotizador.data.Nodes;
 import cl.pingon.cotizador.model.Categories;
+import cl.pingon.cotizador.model.Comments;
 import cl.pingon.cotizador.model.Machines;
 import cl.pingon.cotizador.model.MachinesDetails;
 
@@ -45,8 +46,8 @@ public class CommentsFragment extends Fragment {
 
         Machines machines = (Machines) getActivity().getIntent().getSerializableExtra(MACHINES_DETAILS);
 
-        FirebaseRecyclerOptions<String> options = new FirebaseRecyclerOptions.Builder<String>()
-                .setQuery(new Nodes().comments(machines.getKey()), String.class)
+        FirebaseRecyclerOptions<Comments> options = new FirebaseRecyclerOptions.Builder<Comments>()
+                .setQuery(new Nodes().comments(machines.getKey()), Comments.class)
                 .setLifecycleOwner(getActivity())
                 .build();
 
