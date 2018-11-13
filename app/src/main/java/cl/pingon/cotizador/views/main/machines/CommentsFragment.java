@@ -41,8 +41,8 @@ public class CommentsFragment extends Fragment {
         RecyclerView recyclerView = view.findViewById(R.id.commentsRv);
 
 
-        FirebaseRecyclerOptions<MachinesDetails> options = new FirebaseRecyclerOptions.Builder<MachinesDetails>()
-                .setQuery(new Nodes().comments(""), MachinesDetails.class)
+        FirebaseRecyclerOptions<String> options = new FirebaseRecyclerOptions.Builder<String>()
+                .setQuery(new Nodes().comments(key), String.class)
                 .setLifecycleOwner(getActivity())
                 .build();
 

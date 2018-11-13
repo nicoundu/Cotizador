@@ -13,17 +13,17 @@ import com.firebase.ui.database.FirebaseRecyclerOptions;
 import cl.pingon.cotizador.R;
 import cl.pingon.cotizador.model.MachinesDetails;
 
-public class CommentsAdapter extends FirebaseRecyclerAdapter<MachinesDetails, CommentsAdapter.ViewHolder>{
+public class CommentsAdapter extends FirebaseRecyclerAdapter<String, CommentsAdapter.ViewHolder>{
 
-    public CommentsAdapter(@NonNull FirebaseRecyclerOptions<MachinesDetails> options) {
+    public CommentsAdapter(@NonNull FirebaseRecyclerOptions<String> options) {
         super(options);
     }
 
     @Override
-    protected void onBindViewHolder(@NonNull final CommentsAdapter.ViewHolder holder, int position, @NonNull MachinesDetails machinesDetails) {
-
-        holder.textView.setText(machinesDetails.getComments());
+    protected void onBindViewHolder(@NonNull ViewHolder holder, int position, @NonNull String model) {
+        holder.textView.setText(String.getComments());
     }
+
 
     @NonNull
     @Override
