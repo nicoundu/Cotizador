@@ -16,6 +16,7 @@ public class MachinesDetailsActivity extends AppCompatActivity {
 
     private String key;
     private Fragment inputCommentsFragment;
+    private Fragment commentsFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
