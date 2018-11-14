@@ -28,6 +28,7 @@ public class CommentsFragment extends Fragment {
     public static final String MACHINES_DETAILS = "cl.pingon.cotizador.views.main.visit.KEY.MACHINES_DETAILS";
     private CommentsAdapter adapter;
     private RecyclerView recyclerView;
+    private String comments = "comments";
 
     public CommentsFragment() {
     }
