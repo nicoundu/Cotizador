@@ -11,27 +11,24 @@ import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 
 import cl.pingon.cotizador.R;
-import cl.pingon.cotizador.model.Comments;
-import cl.pingon.cotizador.model.MachinesDetails;
 
-public class CommentsAdapter extends FirebaseRecyclerAdapter<Comments, CommentsAdapter.ViewHolder> {
+public class CommentsAdapter extends FirebaseRecyclerAdapter<String, CommentsAdapter.ViewHolder> {
 
-    public CommentsAdapter(@NonNull FirebaseRecyclerOptions<Comments> options) {
+    public CommentsAdapter(@NonNull FirebaseRecyclerOptions<String> options) {
         super(options);
     }
 
     @Override
-    protected void onBindViewHolder(@NonNull ViewHolder holder, int position, @NonNull Comments comments) {
+    protected void onBindViewHolder(@NonNull ViewHolder holder, int position, @NonNull String singleComment) {
 
-        holder.textView.setText(comments.getComments());
+        holder.textView.setText(singleComment);
     }
 
     @NonNull
     @Override
     public CommentsAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item_comments, parent, false);
-        CommentsAdapter.ViewHolder viewHolder = new CommentsAdapter.ViewHolder(view);
-        return viewHolder;
+        return new CommentsAdapter.ViewHolder(view);
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
